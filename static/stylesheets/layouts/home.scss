@@ -1,0 +1,134 @@
+%h3-center {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  @include media(max-width 480px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+nav.sbtg {
+  $navigation-padding: 1em;
+  $navigation-background: $dark-gray;
+  $navigation-height: 100px;
+
+  background-color: $navigation-background;
+  height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;    
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: .8em 0;
+    }
+  }
+}
+
+header {
+  position:relative;
+  z-index:999;
+  padding:2rem 1rem;
+
+  background: url('../images/nav-bg.png') no-repeat;
+  height:24rem;
+
+  .images {
+    @include clearfix;
+    margin-top: 20px;
+  }
+
+  h1.brand {
+    @include hide-text;
+    @include calc(width, "100% - (#{$button-width} * 2 + 20px)");
+    background: url('../images/logo.png') no-repeat;
+    display: block;
+    height: 11.5rem;
+    float: left;
+    margin-bottom: 2rem;
+
+    @include media(max-width 700px) {
+      @include span-columns(12);
+    }
+  }
+}
+
+section.codex {
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width:30px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: url('../images/thumb.png') no-repeat;
+    display:block;
+    background-position: -5px 0;
+  }
+
+  .container {
+    @include clearfix;
+
+    background: url('../images/bg.png') center no-repeat;
+    margin-top:-2em;
+    color: #535454;
+    text-shadow: 0 1px white;
+
+    @include media(max-width 480px) {
+      padding: 3rem 0;
+    }
+
+    .list-container {
+      background: url('../images/scroll.png') center no-repeat;
+      @include span-columns(5);
+      height: 28rem;
+      text-align:center;
+    }
+
+    .card {
+      @include span-columns(4);
+    }
+
+    .portrait {
+      @include span-columns(3);
+    }
+  }
+
+  @include media(max-width 480px) {
+    margin-top: 3rem;
+  }
+}
+
+section.codex ul.monster-list {
+  margin-top: 5rem;
+  min-width: 16.75rem;
+  max-height: 18rem;
+  overflow: auto;
+  display: inline-block;
+
+  li {
+    @include clearfix;
+    margin: 1rem 0 2rem 0;
+    display: block;
+    padding-left: 1.5rem;
+  }
+}
+
+section.codex img {
+  @include span-columns(7);
+  @include omega;
+
+  @include media(max-width 768px) {
+    @include span-columns(12);
+  }
+}
