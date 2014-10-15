@@ -1,4 +1,5 @@
 *
-!.gitignore
+!*.md
 !*.go
-!*.html
+!static/**/*
+!templates/
