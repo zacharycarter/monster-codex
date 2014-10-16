@@ -1,0 +1,31 @@
+{
+	"ImportPath": "github.com/zacharycarter/monster-codex",
+	"GoVersion": "go1.3.3",
+	"Deps": [
+		{
+			"ImportPath": "github.com/coopernurse/gorp",
+			"Comment": "v1.7",
+			"Rev": "5d19ebd22fdcf3b9fb1c8cbfcf1d4e78e102f1e0"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "14f550f51af52180c2eefed15e5fd18d63c0a64a"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "e444e69cbd2e2e3e0749a2f3c717cec491552bbf"
+		},
+		{
+			"ImportPath": "github.com/gorilla/pat",
+			"Rev": "ae2e162c4b2ae96aa66b596b2c18f17834299ed0"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Rev": "2fe70547fcfbd6deedadd4af3702af16c0297723"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "eca94c41d994ae2215d455ce578ae6e2dc6ee516"
+		}
+	]
+}
