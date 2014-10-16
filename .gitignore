@@ -1,6 +1,5 @@
 .DS_STORE
 static/stylesheets/plugins/*
 static/stylesheets/.sass-cache/
-static/stylesheets/*.css
 static/stylesheets/*.css.map
 monster-codex
