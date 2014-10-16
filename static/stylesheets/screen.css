@@ -457,7 +457,7 @@ section.codex .container {
       section.codex .container .list-container .monster-list li {
         margin: 1rem 0 2rem 0;
         display: block;
-        padding-left: 1.5rem; }
+        padding-left: 1rem; }
         section.codex .container .list-container .monster-list li:after {
           content: "";
           display: table;
