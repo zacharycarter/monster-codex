@@ -131,12 +131,13 @@ header {
 section.codex {
   ::-webkit-scrollbar {
       -webkit-appearance: none;
-      width:30px;
+      width: 30px;
   }
   ::-webkit-scrollbar-thumb {
     background: url('../images/thumb.png') no-repeat;
     display:block;
     background-position: -5px 0;
+    min-height: 42px;
   }
 
   .container {

@@ -5,9 +5,17 @@ type Entity interface {
 }
 
 type Monster struct {
-	Id          int
-	Name        string
-	Description string
+	Id           int
+	Name         string
+	Keywords     []uint8
+	Description  string
+	Hint         string
+	Power        int
+	Charisma     int
+	Intelligence int
+	Finesse      int
+	Talents      []uint8
+	Strikes      int
 }
 
 func (m Monster) Equals(a, b []Entity) bool {

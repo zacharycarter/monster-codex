@@ -425,7 +425,8 @@ section.codex ::-webkit-scrollbar {
 section.codex ::-webkit-scrollbar-thumb {
   background: url("../images/thumb.png") no-repeat;
   display: block;
-  background-position: -5px 0; }
+  background-position: -5px 0;
+  min-height: 42px; }
 section.codex .container {
   background: url("../images/bg.png") center no-repeat;
   margin-top: -2em;
