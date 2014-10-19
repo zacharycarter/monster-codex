@@ -523,15 +523,12 @@ section.codex .container {
         section.codex .container .monster .card .stats .talents:last-child {
           margin-right: 0; }
         section.codex .container .monster .card .stats .talents ul {
-          padding-left: 12px;
           list-style-image: url("../images/skull.png"); }
       section.codex .container .monster .card .stats .adjustments {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 65.88078%;
-        padding-left: 1.8rem;
-        float: right; }
+        width: 65.88078%; }
         section.codex .container .monster .card .stats .adjustments:last-child {
           margin-right: 0; }
         section.codex .container .monster .card .stats .adjustments li {
