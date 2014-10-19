@@ -30,6 +30,7 @@ var app = app || {};
 			// this.$footer = this.$('#footer');
 			// this.$main = this.$('#main');
 			this.$list = $('.monster-list');
+			this.$monster = $('.monster')
 
 			this.listenTo(app.monsters, 'add', this.addOne);
 			this.listenTo(app.monsters, 'reset', this.addAll);
@@ -44,12 +45,13 @@ var app = app || {};
 		// Re-rendering the App just means refreshing the statistics -- the rest
 		// of the app doesn't change.
 		render: function () {
+
 		},
 
 		// Add a single todo item to the list by creating a view for it, and
 		// appending its element to the `<ul>`.
 		addOne: function (monster) {
-			var view = new app.MonsterView({ model: monster });
+			var view = new app.ItemView({ model: monster });
 			this.$list.append(view.render().el);
 		},
 

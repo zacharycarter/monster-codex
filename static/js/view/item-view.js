@@ -8,12 +8,12 @@ var app = app || {};
 	// --------------
 
 	// The DOM element for a todo item...
-	app.MonsterView = Backbone.View.extend({
+	app.ItemView = Backbone.View.extend({
 		//... is a list tag.
 		tagName:  'li',
 
 		// Cache the template function for a single item.
-		template: _.template($('#monster-template').html()),
+		template: _.template($('#item-template').html()),
 
 		// The DOM events specific to an item.
 		events: {

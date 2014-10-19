@@ -428,6 +428,9 @@ section.codex ::-webkit-scrollbar-thumb {
   background-position: -5px 0;
   min-height: 42px; }
 section.codex .container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   background: url("../images/bg.png") center no-repeat;
   margin-top: -2em;
   color: #535454;
@@ -436,17 +439,22 @@ section.codex .container {
     content: "";
     display: table;
     clear: both; }
+  section.codex .container:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media screen and (max-width: 480px) {
     section.codex .container {
       padding: 3rem 0; } }
   section.codex .container .list-container {
-    background: url("../images/scroll.png") center no-repeat;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
+    background: url("../images/scroll.png") center no-repeat;
     height: 28rem;
-    text-align: center; }
+    text-align: center;
+    margin-right: 0; }
     section.codex .container .list-container:last-child {
       margin-right: 0; }
     section.codex .container .list-container .monster-list {
@@ -459,93 +467,91 @@ section.codex .container {
         margin: 1rem 0 2rem 0;
         display: block;
         padding-left: 1rem; }
-        section.codex .container .list-container .monster-list li:after {
-          content: "";
-          display: table;
-          clear: both; }
-  section.codex .container .card {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    margin-left: -3rem;
-    margin-bottom: 1.5em;
-    cursor: pointer;
-    position: relative;
-    text-align: justify; }
-    section.codex .container .card:after {
-      content: "";
-      display: table;
-      clear: both; }
-    @media screen and (min-width: 53.75em) {
-      section.codex .container .card {
+  section.codex .container .monster {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    section.codex .container .monster:last-child {
+      margin-right: 0; }
+    section.codex .container .monster .card {
+      margin-top: 3rem;
+      margin-bottom: 1.5em;
+      cursor: pointer;
+      position: relative; }
+      @media screen and (min-width: 53.75em) {
+        section.codex .container .monster .card {
+          float: left;
+          display: block;
+          margin-right: 4.11092%;
+          width: 55.38104%; }
+          section.codex .container .monster .card:last-child {
+            margin-right: 0; }
+          section.codex .container .monster .card:nth-child(3n) {
+            margin-right: 0; }
+          section.codex .container .monster .card:nth-child(3n+1) {
+            clear: left; } }
+      section.codex .container .monster .card .card-header {
+        text-align: center;
+        line-height: 2.75rem;
+        height: 3rem; }
+        section.codex .container .monster .card .card-header * {
+          display: inline-block; }
+        section.codex .container .monster .card .card-header .type {
+          float: left;
+          width: -webkit-calc(100% / 3);
+          width: calc(100% / 3); }
+        section.codex .container .monster .card .card-header h4 {
+          margin-top: 0;
+          float: left;
+          width: -webkit-calc(100% / 3);
+          width: calc(100% / 3); }
+        section.codex .container .monster .card .card-header .rating {
+          float: right; }
+          section.codex .container .monster .card .card-header .rating img {
+            vertical-align: middle; }
+      section.codex .container .monster .card .hint {
+        background-color: white; }
+        section.codex .container .monster .card .hint p {
+          padding: .5rem .5rem 0 .5rem;
+          font-size: 14px; }
+      section.codex .container .monster .card .stats .talents {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        section.codex .container .card:last-child {
+        section.codex .container .monster .card .stats .talents:last-child {
           margin-right: 0; }
-        section.codex .container .card:nth-child(3n) {
-          margin-right: 0; }
-        section.codex .container .card:nth-child(3n+1) {
-          clear: left; } }
-    section.codex .container .card .card-header {
-      text-align: center;
-      line-height: 2.75rem;
-      height: 3rem; }
-      section.codex .container .card .card-header * {
-        display: inline-block; }
-      section.codex .container .card .card-header .type {
-        float: left;
-        width: -webkit-calc(100% / 3);
-        width: calc(100% / 3); }
-      section.codex .container .card .card-header h4 {
-        margin-top: 0;
-        float: left;
-        width: -webkit-calc(100% / 3);
-        width: calc(100% / 3); }
-      section.codex .container .card .card-header .rating {
-        float: right; }
-        section.codex .container .card .card-header .rating img {
-          vertical-align: middle; }
-    section.codex .container .card .hint {
-      background-color: white; }
-      section.codex .container .card .hint p {
-        padding: .5rem .5rem 0 .5rem;
-        font-size: 14px; }
-    section.codex .container .card .stats .talents {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      section.codex .container .card .stats .talents:last-child {
-        margin-right: 0; }
-      section.codex .container .card .stats .talents ul {
-        padding-left: 12px;
-        list-style-image: url("../images/skull.png"); }
-    section.codex .container .card .stats .adjustments {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      padding-left: 1.8rem;
-      float: right; }
-      section.codex .container .card .stats .adjustments:last-child {
-        margin-right: 0; }
-      section.codex .container .card .stats .adjustments li {
+        section.codex .container .monster .card .stats .talents ul {
+          padding-left: 12px;
+          list-style-image: url("../images/skull.png"); }
+      section.codex .container .monster .card .stats .adjustments {
         float: left;
         display: block;
-        margin-right: 3.57866%;
-        width: 22.316%;
-        background: url("../images/strength.png") no-repeat;
-        min-width: 92px;
-        min-height: 78px;
-        padding: 15px 0 0 70px; }
-        section.codex .container .card .stats .adjustments li:last-child {
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        padding-left: 1.8rem;
+        float: right; }
+        section.codex .container .monster .card .stats .adjustments:last-child {
           margin-right: 0; }
-@media screen and (max-width: 480px) {
-  section.codex {
-    margin-top: 3rem; } }
+        section.codex .container .monster .card .stats .adjustments li {
+          float: left;
+          display: block;
+          margin-right: 3.57866%;
+          width: 22.316%;
+          background: url("../images/strength.png") no-repeat;
+          min-width: 92px;
+          min-height: 78px;
+          padding: 15px 0 0 70px; }
+          section.codex .container .monster .card .stats .adjustments li:last-child {
+            margin-right: 0; }
+    section.codex .container .monster .portrait {
+      float: left;
+      display: block;
+      margin-right: 4.11092%;
+      width: 40.50805%; }
+      section.codex .container .monster .portrait:last-child {
+        margin-right: 0; }
 
 .footer-2 {
   background: #333;

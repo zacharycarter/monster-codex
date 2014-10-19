@@ -141,8 +141,8 @@ section.codex {
   }
 
   .container {
+    @include outer-container;
     @include clearfix;
-
     background: url('../images/bg.png') center no-repeat;
     margin-top:-2em;
     color: #535454;
@@ -153,10 +153,11 @@ section.codex {
     }
 
     .list-container {
-      background: url('../images/scroll.png') center no-repeat;
       @include span-columns(5);
+      background: url('../images/scroll.png') center no-repeat;
       height: 28rem;
       text-align:center;
+      margin-right: 0;
 
       .monster-list {
         margin-top: 5rem;
@@ -166,7 +167,6 @@ section.codex {
         display: inline-block;
 
         li {
-          @include clearfix;
           margin: 1rem 0 2rem 0;
           display: block;
           padding-left: 1rem;
@@ -174,84 +174,83 @@ section.codex {
       }
     }
 
-    .card {
-      @include outer-container;
-      margin-top: 3rem;
-      margin-left: -3rem;
-      margin-bottom: $base-spacing;
-      cursor: pointer;
-      position: relative;
-      text-align: justify;
+    .monster {
+      @include span-columns(7);
+      .card {
+        margin-top: 3rem;
+        margin-bottom: $base-spacing;
+        cursor: pointer;
+        position: relative;
 
-      @include media($large-screen) {
-        @include span-columns(4);  
-        @include omega(3n);
-      }
-
-      .card-header {
-        text-align: center;
-        line-height: 2.75rem;
-        height: 3rem;
-
-        * {
-          display: inline-block; 
+        @include media($large-screen) {
+          @include span-columns(4 of 7);
+          @include omega(3n);
         }
 
-        .type { 
-          float: left;
-          @include calc(width, '100% / 3');
-        }
+        .card-header {
+          text-align: center;
+          line-height: 2.75rem;
+          height: 3rem;
 
-        h4 { 
-          margin-top: 0;
-          float: left;
-          @include calc(width, '100% / 3');
-        }
-
-        .rating {
-          float: right;
-          img {
-            vertical-align: middle;
+          * {
+            display: inline-block; 
           }
-        }
-      }
 
-      .hint {
-        background-color: white;
+          .type { 
+            float: left;
+            @include calc(width, '100% / 3');
+          }
 
-        p {
-          padding: .5rem .5rem 0 .5rem;
-          font-size: 14px;
-        }
-      }
+          h4 { 
+            margin-top: 0;
+            float: left;
+            @include calc(width, '100% / 3');
+          }
 
-      .stats {
-        .talents {
-          @include span-columns(4);
-          ul {
-            padding-left: 12px;
-            list-style-image: url('../images/skull.png');
+          .rating {
+            float: right;
+            img {
+              vertical-align: middle;
+            }
           }
         }
 
-        .adjustments {
-          @include span-columns(8);
-          padding-left: 1.8rem;
-          float: right;
-          li {
-            @include span-columns(2 of 8);
-            background: url('../images/strength.png') no-repeat;
-            min-width: 92px;
-            min-height: 78px;
-            padding: 15px 0 0 70px;
+        .hint {
+          background-color: white;
+
+          p {
+            padding: .5rem .5rem 0 .5rem;
+            font-size: 14px;
           }
         }
+
+        .stats {
+          .talents {
+            @include span-columns(4);
+            ul {
+              padding-left: 12px;
+              list-style-image: url('../images/skull.png');
+            }
+          }
+
+          .adjustments {
+            @include span-columns(8);
+            padding-left: 1.8rem;
+            float: right;
+            li {
+              @include span-columns(2 of 8);
+              background: url('../images/strength.png') no-repeat;
+              min-width: 92px;
+              min-height: 78px;
+              padding: 15px 0 0 70px;
+            }
+          }
+        }
+      }
+      .portrait {
+        @include span-columns(3 of 7);
       }
     }
-  }
-
-  @include media(max-width 480px) {
-    margin-top: 3rem;
   }
 }
 
