@@ -14,51 +14,56 @@ var app = app || {};
 		// the App already present in the HTML.
 		el: '.codex',
 
+		monsterTemplate: _.template($('#monster-template').html()),
+
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
-			/*'keypress #new-todo': 'createOnEnter',
-			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete'*/
+			'click .monster-name': 'updateMonster'
 		},
 
-		// At initialization we bind to the relevant events on the `Todos`
-		// collection, when items are added or changed. Kick things off by
-		// loading any preexisting todos that might be saved in *localStorage*.
 		initialize: function () {
-			// this.allCheckbox = this.$('#toggle-all')[0];
-			// this.$input = this.$('#new-todo');
-			// this.$footer = this.$('#footer');
-			// this.$main = this.$('#main');
 			this.$list = $('.monster-list');
-			this.$monster = $('.monster')
+			this.$monster = $('.monster');
 
 			this.listenTo(app.monsters, 'add', this.addOne);
 			this.listenTo(app.monsters, 'reset', this.addAll);
 			this.listenTo(app.monsters, 'all', this.render);
 
-			// Suppresses 'add' events with {reset: true} and prevents the app view
-			// from being re-rendered for every model. Only renders when the 'reset'
-			// event is triggered at the end of the fetch.
 			app.monsters.fetch({reset: true});
 		},
 
-		// Re-rendering the App just means refreshing the statistics -- the rest
-		// of the app doesn't change.
 		render: function () {
-
+			
 		},
 
-		// Add a single todo item to the list by creating a view for it, and
-		// appending its element to the `<ul>`.
 		addOne: function (monster) {
 			var view = new app.ItemView({ model: monster });
 			this.$list.append(view.render().el);
 		},
 
-		// Add all items in the **Todos** collection at once.
 		addAll: function () {
+			var monsters = app.monsters;
+
 			this.$list.html('');
-			app.monsters.each(this.addOne, this);
+			monsters.each(this.addOne, this);
+			this.$monster.html(
+				this.monsterTemplate(
+					monsters.at(0).toJSON()
+				)
+			);
+		},
+
+		updateMonster: function(e) {
+			e.preventDefault();
+			
+			this.$monster.html(
+				this.monsterTemplate(
+					app.monsters.get(
+						$(e.currentTarget)
+						.data("id")
+					).toJSON()
+				)
+			);
 		}
 	});
 })(jQuery);
