@@ -42,25 +42,22 @@
     <div class="type">
       <img class="type" src="static/images/humanoid.png" alt="">
     </div>
-    <h5><%- Name %></h5>
+    <p><%- Name %></p>
     <div class="rating">
       <img src="static/images/crossbones.png" alt="">
-      <span>1</span>
+      <span><%- Strikes %></span>
     </div>
   </div>
   <div class="description">
-    <p>If players are having a tough time dealing with a 
-    group of Goblins, they're either drunk or bad at rolling.</p>
+    <p><%- Description %></p>
   </div>
   <div class="hint">
-    <p>Goblins are pretty weak but obnoxious, and
-    can be formidable in numbers. They're usually
-    pretty gross, too.</p>
+    <p><%- Hint %></p>
   </div>
   <div class="stats">
     <div class="talents">
       <h6>Sample Talents</h6>
-      <ul>
+      <ul id="talent-list">
         <li>Thievery</li>
         <li>Taunts</li>
         <li>Foul Odor</li>
@@ -68,10 +65,26 @@
     </div>
     <ul class="adjustments">
       <h6>Stat Adjustments</h6>
-      <li><p>+1</p></li>
-      <li><p>/</p></li>
-      <li><p>+1</p></li>
-      <li><p>/</p></li>
+      <li class="power">
+        <p>
+          <% if ( Power == 0 ) { %> / <%} else { %> <%- Power %> <% } %>
+        </p>
+      </li>
+      <li class="charisma">
+        <p>
+          <% if ( Charisma == 0 ) { %> / <%} else { %> <%- Charisma %> <% } %>
+        </p>
+      </li>
+      <li class="intelligence">
+        <p>
+          <% if ( Intelligence == 0 ) { %> / <%} else { %> <%- Intelligence %> <% } %>
+        </p>
+      </li>
+      <li class="finesse">
+        <p>
+          <% if ( Finesse == 0 ) { %> / <%} else { %> <%- Finesse %> <% } %>
+        </p>
+      </li>
     </ul>
   </div>
 </div>

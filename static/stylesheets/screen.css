@@ -501,11 +501,9 @@ section.codex .container {
           float: left;
           width: -webkit-calc(100% / 3);
           width: calc(100% / 3); }
-        section.codex .container .monster .card .card-header h4 {
+        section.codex .container .monster .card .card-header p {
           margin-top: 0;
-          float: left;
-          width: -webkit-calc(100% / 3);
-          width: calc(100% / 3); }
+          float: left; }
         section.codex .container .monster .card .card-header .rating {
           float: right; }
           section.codex .container .monster .card .card-header .rating img {
@@ -523,6 +521,7 @@ section.codex .container {
         section.codex .container .monster .card .stats .talents:last-child {
           margin-right: 0; }
         section.codex .container .monster .card .stats .talents ul {
+          margin-left: 1rem;
           list-style-image: url("../images/skull.png"); }
       section.codex .container .monster .card .stats .adjustments {
         float: left;
