@@ -535,19 +535,43 @@ section.codex .container {
           display: block;
           margin-right: 3.57866%;
           width: 22.316%;
-          background: url("../images/strength.png") no-repeat;
           min-width: 92px;
           min-height: 78px;
           padding: 15px 0 0 70px; }
           section.codex .container .monster .card .stats .adjustments li:last-child {
             margin-right: 0; }
+        section.codex .container .monster .card .stats .adjustments .power {
+          background: url("../images/power.png") no-repeat; }
+        section.codex .container .monster .card .stats .adjustments .intelligence {
+          background: url("../images/intelligence.png") no-repeat; }
+        section.codex .container .monster .card .stats .adjustments .finesse {
+          background: url("../images/finesse.png") no-repeat; }
+        section.codex .container .monster .card .stats .adjustments .charisma {
+          background: url("../images/charisma.png") no-repeat; }
     section.codex .container .monster .portrait {
       float: left;
       display: block;
       margin-right: 4.11092%;
-      width: 40.50805%; }
+      width: 40.50805%;
+      margin-top: 3rem;
+      margin-left: -1rem;
+      display: inline-block;
+      position: relative; }
       section.codex .container .monster .portrait:last-child {
         margin-right: 0; }
+      section.codex .container .monster .portrait .frame {
+        display: block; }
+        section.codex .container .monster .portrait .frame img {
+          position: relative;
+          z-index: 2; }
+        section.codex .container .monster .portrait .frame .image {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          z-index: 1; }
+          section.codex .container .monster .portrait .frame .image img {
+            height: 290px;
+            z-index: 1; }
 
 .footer-2 {
   background: #333;

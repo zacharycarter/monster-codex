@@ -237,16 +237,49 @@ section.codex {
             @include span-columns(8);
             li {
               @include span-columns(2 of 8);
-              background: url('../images/strength.png') no-repeat;
               min-width: 92px;
               min-height: 78px;
               padding: 15px 0 0 70px;
+            }
+
+            .power {
+              background: url('../images/power.png') no-repeat;
+            }
+            .intelligence {
+              background: url('../images/intelligence.png') no-repeat;
+            }
+            .finesse {
+              background: url('../images/finesse.png') no-repeat;
+            }
+            .charisma {
+              background: url('../images/charisma.png') no-repeat;
             }
           }
         }
       }
       .portrait {
         @include span-columns(3 of 7);
+        margin-top: 3rem; 
+        margin-left: -1rem;
+        display: inline-block;
+        position: relative;
+        .frame {
+          display: block;
+          img {
+            position: relative;
+            z-index: 2;
+          }
+          .image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            img {
+              height: 290px;
+              z-index: 1;
+            }
+          }
+        }
       }
     }
   }
