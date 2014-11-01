@@ -48,7 +48,7 @@ var app = app || {};
 			monsters.each(this.addOne, this);
 			this.$monster.html(
 				this.monsterTemplate(
-					monsters.at(0).toJSON()
+					monsters.at(Math.floor(Math.random() * (monsters.length - 0)) + 0).toJSON()
 				)
 			);
 		},

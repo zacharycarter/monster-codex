@@ -39,7 +39,7 @@ func (r *MonsterRepository) Get(id uint64) (*entity.Monster, error) {
 func (r *MonsterRepository) List() ([]*entity.Monster, error) {
 	var monsters []*entity.Monster
 
-	if err := r.Executor.Select(&monsters, `SELECT * FROM monster`); err != nil {
+	if err := r.Executor.Select(&monsters, `SELECT * FROM monster order by name asc`); err != nil {
 		return nil, err
 	}
 
