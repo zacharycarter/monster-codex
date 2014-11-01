@@ -16,6 +16,7 @@ type Monster struct {
 	Finesse      int8
 	Talents      []byte
 	Strikes      int8
+	Image        string
 }
 
 func init() {
