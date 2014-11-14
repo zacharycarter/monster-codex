@@ -7,14 +7,14 @@ import (
 type Monster struct {
 	Id           uint64
 	Name         string
-	Keywords     []byte
+	Keywords     db.StringSlice
 	Description  string
 	Hint         string
 	Power        int8
 	Charisma     int8
 	Intelligence int8
 	Finesse      int8
-	Talents      []byte
+	Talents      db.StringSlice
 	Strikes      int8
 	Image        string
 }

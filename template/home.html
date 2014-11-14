@@ -58,9 +58,9 @@
     <div class="talents">
       <h6>Sample Talents</h6>
       <ul id="talent-list">
-        <li>Thievery</li>
-        <li>Taunts</li>
-        <li>Foul Odor</li>
+      <% for(var i=0; i<Talents.Slice.length; i++) {%>
+        <li><%= Talents.Slice[i] %></li>
+      <% } %>
       </ul>
     </div>
     <ul class="adjustments">
