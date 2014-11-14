@@ -39,8 +39,10 @@
 <script type="text/template" id="monster-template">
 <div class="card">
   <div class="card-header">
-    <div class="type">
-      <img class="type" src="static/images/humanoid.png" alt="">
+    <div class="types">
+      <% for(var i=0; i<Keywords.Slice.length; i++) {%>
+        <img class="type" src="http://s3.amazonaws.com/sbtg/monster-icons/<%- Keywords.Slice[i].toLowerCase() %>.png" alt="">
+      <% } %>
     </div>
     <p><%- Name %></p>
     <div class="rating">

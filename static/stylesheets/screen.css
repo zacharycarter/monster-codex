@@ -497,10 +497,13 @@ section.codex .container {
         height: 3rem; }
         section.codex .container .monster .card .card-header * {
           display: inline-block; }
-        section.codex .container .monster .card .card-header .type {
+        section.codex .container .monster .card .card-header .types {
           float: left;
           width: -webkit-calc(100% / 3);
           width: calc(100% / 3); }
+          section.codex .container .monster .card .card-header .types .type {
+            padding-right: 0.5rem;
+            float: left; }
         section.codex .container .monster .card .card-header p {
           margin-top: 0;
           float: left; }
