@@ -1,6 +1,7 @@
 package repository
 
 import (
+	"encoding/base64"
 	"errors"
 
 	"github.com/jmoiron/modl"
@@ -32,6 +33,8 @@ func (r *MonsterRepository) Get(id uint64) (*entity.Monster, error) {
 	if monster == nil {
 		return nil, monsterNotFound
 	}
+
+	monster.Talents = base64.StdEncoding.DecodeString(monster.Talents)
 
 	return monster, nil
 }
