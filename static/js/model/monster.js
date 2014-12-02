@@ -14,6 +14,7 @@ var app = app || {};
 
 		defaults: {
 			Name: '',
+			Talents: [],
 			Keywords: [],
 			Description: ''
 		}

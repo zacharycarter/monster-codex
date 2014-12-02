@@ -196,8 +196,13 @@ section.codex {
             display: inline-block; 
           }
 
-          .type { 
+          .types { 
             float: left;
+            .type {
+              padding-right: 0.5rem;
+              float: left;
+            }
+
             @include calc(width, '100% / 3');
           }
 
